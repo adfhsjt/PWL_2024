@@ -139,3 +139,18 @@ Route::get('/user/profile', function () {
 
 // Route::view('/welcome', 'welcome');
 // Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+
+// View
+
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Ahmad Dzul Fadhli Hannan']);
+// });
+
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Ahmad Dzul Fadhli Hannan']);
+// });
+
+Route::get('/greeting', [
+    WelcomeController::class,
+    'greeting'
+]);
